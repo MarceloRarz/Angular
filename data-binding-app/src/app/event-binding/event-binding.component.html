@@ -1,0 +1,19 @@
+<p>event-binding works!</p>
+
+<section>
+    <button mat-button color="primary" (click)='salvar()'>Salvar</button>
+    <button mat-button color="warn" (click)='incremento()'>{{NomeButton}}</button>
+</section>
+
+<section>
+        <button mat-button color="primary" [disabled]='!bntEnabled'>Button 1</button>
+        <button mat-button color="primary" [disabled]='!bntEnabled'>Button 2</button>
+
+        <button mat-button color="warn" (click)='desabilitar()' [disabled]='!bntEnabled'>Desabilitar</button>
+
+        <mat-progress-spinner        
+        color="primary"
+        [mode]="spinermode"
+        value="0">
+    </mat-progress-spinner>        
+    </section>
