@@ -11,6 +11,9 @@ export class EventBindingComponent implements OnInit {
   i = 0;
   spinermode = 'determinate';
   bntEnabled = true;
+  selectDisabled = false;
+  selectedOption = 1;
+  inputName="Marcelo"
 
   constructor() { }
 
@@ -34,6 +37,21 @@ export class EventBindingComponent implements OnInit {
       this.bntEnabled = true;
       this.spinermode = 'determinate';
     }, 3000 )
+  }
+
+  cbChange(event){
+    console.log(event.checked)  
+    this.selectDisabled = event.checked;
+  }
+
+  selectiononChange(event) {
+    console.log(event)
+    this.selectedOption = event.value;
+  }
+
+  inputEvent(event){
+    console.log(event.target.value);
+    console.log(this.inputName);
   }
 
 }
