@@ -1,0 +1,16 @@
+<p *ngFor="let name of names"> {{name}} </p>
+
+<p *ngFor="let name of names"> {{name}} </p>
+
+<mat-card>
+    <mat-card-content>
+        <mat-selection-list #NomesSelecionados>
+            <mat-list-option *ngFor="let name of names">{{ name }}</mat-list-option>
+        </mat-selection-list>
+    </mat-card-content>
+    <mat-card-footer>
+        <p>
+            Opções Selecionadas: {{NomesSelecionados.selectedOptions.selected.length}}
+        </p>
+    </mat-card-footer>
+</mat-card>

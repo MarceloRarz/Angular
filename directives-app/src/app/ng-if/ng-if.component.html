@@ -1,0 +1,43 @@
+<mat-card>
+
+        <mat-card-title>
+          Selecione
+        </mat-card-title>
+      
+        <mat-card-content>
+      
+          <section>
+              <p>Selecione o campo que voçe precisa:</p>
+              <section>
+                  <mat-checkbox name="mostrarNome" [(ngModel)]="showNome"  >Nome</mat-checkbox>
+                  <mat-checkbox name="mostrarEndereço" [(ngModel)]="showEndereco" >Endereço</mat-checkbox>
+                  <mat-checkbox name="mostrarFone" [(ngModel)]="showFone" >Fone</mat-checkbox>
+                  <mat-checkbox name="mostrarIdade" [(ngModel)]="showIdade" >Idade</mat-checkbox>
+              </section>
+          </section>
+      
+          <br><br>
+      
+          <section>
+            <mat-form-field *ngIf="showNome" >
+                  <input matInput placeholder="Nome">
+              </mat-form-field>
+              <mat-form-field *ngIf="showEndereco">
+                  <input matInput placeholder="Endereco">
+              </mat-form-field>
+              <mat-form-field *ngIf="showFone">
+                  <input matInput placeholder="Fone">
+              </mat-form-field>
+              <mat-form-field *ngIf="showIdade">
+                  <input matInput placeholder="Idade" type="number">
+              </mat-form-field>                        
+          </section>
+      
+        </mat-card-content>
+      
+        <mat-card-footer>
+            <app-sub-ng-if *ngIf="showNome && showEndereco && showIdade && showFone"></app-sub-ng-if>        
+        </mat-card-footer>
+        
+      </mat-card>
+      

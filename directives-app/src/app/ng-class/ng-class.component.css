@@ -1,0 +1,34 @@
+mat-card {
+    margin: 40px;
+}
+
+.minhaclasse1 {
+    font-size: 6px;
+    color: limegreen;
+    background-color: blueviolet;
+    padding: 10px;
+}
+
+
+.minhaclasse2 {
+    font-size: 20px;
+    color: white;
+    background-color: lightgray;
+    padding: 30px;
+}
+
+
+.minhaclasse3 {
+    font-size: 12px;
+    color: rgb(172, 22, 22);
+    background-color: yellowgreen;
+    padding: 20px;
+}
+
+
+.minhaclasse4 {
+    font-size: 16px;
+    color: peru;
+    background-color: powderblue;
+    padding: 15px;
+}
