@@ -1,3 +1,4 @@
+<!--
 <p *ngFor="let name of names"> {{name}} </p>
 
 <p *ngFor="let name of names"> {{name}} </p>
@@ -14,3 +15,28 @@
         </p>
     </mat-card-footer>
 </mat-card>
+
+-->
+
+<mat-card>
+    <mat-card-content>
+        <mat-list>
+            <h3 matSubHeader>Nomes</h3>
+            <mat-list-item *ngFor="let nome of names">
+                <mat-icon matListIcon>person</mat-icon>
+                <h4 matLine>{{nome}}</h4>
+            </mat-list-item>
+       
+            <mat-divider></mat-divider>
+            <h3 matSubHeader>Cidades</h3>
+            <mat-list-item *ngFor="let cidade of cidades">
+                <mat-icon matListIcon>location_city</mat-icon>
+                <h4 matLine>{{cidade.nome}}</h4>
+                <h4 matLine>{{cidade.estado}}</h4>
+            </mat-list-item>
+        </mat-list>
+    </mat-card-content>
+    <mat-card-footer>        
+    </mat-card-footer>
+</mat-card>
+
