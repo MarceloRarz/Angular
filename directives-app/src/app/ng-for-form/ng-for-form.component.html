@@ -1,0 +1,39 @@
+<mat-card>
+    <mat-card-content>
+        <section>
+            <mat-form-field class="form-field">
+                <input matInput placeholder="Primeiro nome" name="nome" [(ngModel)]="nome">
+                <mat-icon matSuffix>person</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field class="form-field">
+                    <input matInput placeholder="Endereço" name="endereco" [(ngModel)]="endereco">
+                    <mat-icon matSuffix>home</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field class="form-field"> 
+                    <input matInput placeholder="Fone" name="fone" [(ngModel)]="fone">
+                    <mat-icon matSuffix>phone</mat-icon>
+            </mat-form-field>          
+            
+            <mat-form-field class="form-field">
+                    <mat-select placeholder="Cidade" [(ngModel)]="cidade" name="cidade">
+                        <mat-option *ngFor="let cidade of cidades" [value]="cidade.nome">
+                            {{cidade.nome}} - {{cidade.estado}}
+                        </mat-option>
+                    </mat-select>
+            </mat-form-field>    
+            
+            <mat-form-field class="form-field">
+                    <input matInput placeholder="Idade" name="idade" [(ngModel)]="idade">                    
+            </mat-form-field>   
+
+        </section>
+    </mat-card-content>
+    <mat-card-actions>
+            <button mat-raised-button color="primary">Salvar</button>
+            <button mat-raised-button color="warn">Cancelar</button>
+    </mat-card-actions>
+</mat-card>    
+
+
