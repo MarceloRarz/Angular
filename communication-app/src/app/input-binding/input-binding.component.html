@@ -1,3 +1,10 @@
 <p>Primeiro nome: {{nome}}</p>
 <p>Sobrenome: {{sobrenome}}</p>
 <p>apelido: {{nickname}}</p>
+<p>idade: {{idade}}</p>
+
+<h1>Meus Clientes</h1>
+<div *ngFor = "let c of clients" >
+<app-client  [client] ="c"> </app-client>
+
+</div>
