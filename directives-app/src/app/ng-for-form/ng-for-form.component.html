@@ -31,9 +31,30 @@
         </section>
     </mat-card-content>
     <mat-card-actions>
-            <button mat-raised-button color="primary">Salvar</button>
-            <button mat-raised-button color="warn">Cancelar</button>
+            <button mat-raised-button color="primary" (click)="save()" >Salvar</button>
+            <button mat-raised-button color="warn" (click)="cancel()">Cancelar</button>
     </mat-card-actions>
 </mat-card>    
 
+<mat-card class="card" *ngIf="clientes.length > 0">
+    <mat-card-content>
+        <section>
+            <mat-list>
+                <h3 matHeader>Clientes</h3>
+                <mat-divider></mat-divider>
 
+                <mat-list-item *ngFor="let clie of clientes; let i=index">
+                    <mat-icon matListIcon>person</mat-icon>
+                    <h2 matLine>Nome: {{clie.nome}}</h2>
+                    <h2 matLine>Endereço: {{clie.endereco}}</h2>
+                    <h2 matLine>Fone: {{clie.fone}}</h2>
+                    <h2 matLine>Idade: {{clie.idade}}</h2>
+                    <h2 matLine>Cidade: {{clie.cidade}}</h2>
+                    <button mat-icon-button color="accent" (click)="delete(i)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </mat-list-item>
+            </mat-list>
+        </section>
+    </mat-card-content>
+</mat-card>

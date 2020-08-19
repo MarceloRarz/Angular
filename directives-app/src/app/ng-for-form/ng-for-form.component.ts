@@ -22,9 +22,35 @@ export class NgForFormComponent implements OnInit {
 
   ];
 
+  clientes = []
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  save() {
+    this.clientes.push(
+      { 
+        nome: this.nome,
+        endereco: this.endereco,
+        fone: this.fone,
+        cidade: this.cidade,
+        idade: this.idade
+      }
+    );
+    this.cancel();
+    console.log(this.clientes);
+  }
+  cancel() {
+    this.nome = '';
+    this.endereco = '';
+    this.fone = '';
+    this.cidade = '';
+    this.idade = 0;
+  }
+  delete(i: number){
+   // console.log("delete: " + i)
+    this.clientes.splice(i,1);
+  }
 }
