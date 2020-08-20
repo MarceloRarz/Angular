@@ -1,0 +1,3 @@
+[submodule "myapp"]
+	path = myapp
+	url = F:\\Cursos\\Angular\\myapp
